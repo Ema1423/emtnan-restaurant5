@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Emtnan Restaurant</title>
+
+    <link rel="stylesheet" href="emtnan-restaurant5.css" />
+</head>
+
+<body>
+
+<header class="checkout-header">
+    <h2 class="logo">Emtnan</h2>
+    <a href="cart.html" class="back-link">← Back to Cart</a>
+</header>
+
+<!-- ======= Steps Navigation ======= -->
+<div class="steps">
+    <div class="step active">
+        <span class="icon">🛒</span>
+        <p>Cart</p>
+    </div>
+    <div class="step active">
+        <span class="icon">📄</span>
+        <p>Details</p>
+    </div>
+    <div class="step">
+        <span class="icon">💳</span>
+        <p>Payment</p>
+    </div>
+    <div class="step">
+        <span class="icon">✔</span>
+        <p>Confirmation</p>
+    </div>
+</div>
+
+<!-- ==================== NEW MODERN CHECKOUT WRAPPER ==================== -->
+<div class="checkout-wrapper">
+
+    <!-- LEFT FORM -->
+    <form class="checkout-form" id="checkoutForm">
+
+        <h2>Delivery Information</h2>
+
+        <label>Full Name</label>
+        <input type="text" id="fullName" required />
+
+        <label>Phone Number</label>
+        <input type="tel" id="phone" required />
+
+        <label>Email Address</label>
+        <input type="email" id="email" required />
+
+        <label>Delivery Address</label>
+        <input type="text" id="address" required />
+
+        <h2>Payment Method</h2>
+
+        <div class="payment-options">
+            <label><input type="radio" name="payment" value="Card" required /> Credit Card</label>
+            <label><input type="radio" name="payment" value="Cash" /> Cash on Delivery</label>
+        </div>
+
+        <label>Special Instructions (Optional)</label>
+        <textarea id="notes"></textarea>
+
+    </form>
+
+    <!-- RIGHT SUMMARY -->
+    <div class="summary-box-checkout">
+
+        <h2>Order Summary</h2>
+
+        <ul id="orderReview"></ul>
+
+        <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="subtotal">0 SAR</span>
+        </div>
+
+        <div class="summary-row">
+            <span>Delivery Fees:</span>
+            <span>5 SAR</span>
+        </div>
+
+        <div class="summary-row">
+            <span>VAT (5%):</span>
+            <span id="tax">0 SAR</span>
+        </div>
+
+        <div class="summary-total">
+            <span>Total:</span>
+            <span id="totalPrice">0 SAR</span>
+        </div>
+
+       <a class="checkout-btn" onclick="submitOrder()">Proceed to Payment</a>     
+   </div>
+
+</div>
+<script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - Emtnan Restaurant</title>
+    <link rel="stylesheet" href="emtnan-restaurant5.css">
+    <script defer src="invoice.js"></script>
+</head>
+
+<body>
+
+<div class="confirmation-box">
+
+    <h1>Invoice</h1>
+    <p class="success-text">Here is your order receipt</p>
+
+    <div class="info-box">
+        <h2>Customer Information</h2>
+        <p><strong>Name:</strong> <span id="invName"></span></p>
+        <p><strong>Phone:</strong> <span id="invPhone"></span></p>
+        <p><strong>Address:</strong> <span id="invAddress"></span></p>
+        <p><strong>Payment Method:</strong> <span id="invPayment"></span></p>
+    </div>
+
+    <div class="order-items">
+        <h2>Items</h2>
+        <ul id="invItems"></ul>
+    </div>
+
+    <div class="total-box">
+        <h2>Payment Summary</h2>
+
+        <div class="summary-line">
+            <span>Subtotal</span>
+            <span id="invSubtotal">0 SAR</span>
+        </div>
+
+        <div class="summary-line">
+            <span>Tax (5%)</span>
+            <span id="invTax">0 SAR</span>
+        </div>
+
+        <div class="summary-line">
+            <span>Total Paid</span>
+            <span id="invTotal">0 SAR</span>
+        </div>
+    </div>
+
+    <div class="confirm-buttons">
+        <button class="btn-gold" onclick="window.print()">Print Receipt</button>
+
+        <a href="order-status.html">Track Your Order</a>
+        <a href="index.html" class="btn-outline">Back to Home</a>
+    </div>
+
+</div>
+
+</body>
+</html>

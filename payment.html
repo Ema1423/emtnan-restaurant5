@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment - Emtnan Restaurant</title>
+
+  <!-- نفس ملف التنسيق حق المشروع -->
+  <link rel="stylesheet" href="emtnan-restaurant5.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="checkout-header">
+    <h2 class="logo">Emtnan</h2>
+    <a href="checkout.html" class="back-link">← Back to Details</a>
+  </header>
+
+  <!-- ===== Steps Bar ===== -->
+  <div class="steps">
+    <div class="step">
+      <span class="icon">🛒</span>
+      <p>Cart</p>
+    </div>
+    <div class="step">
+      <span class="icon">📄</span>
+      <p>Details</p>
+    </div>
+    <div class="step active">
+      <span class="icon">💳</span>
+      <p>Payment</p>
+    </div>
+    <div class="step">
+      <span class="icon">✔</span>
+      <p>Confirmation</p>
+    </div>
+  </div>
+
+  <main class="checkout-page">
+
+    <!-- ===== Payment Form ===== -->
+    <section class="checkout-box">
+      <h2>Payment Method</h2>
+
+      <form id="paymentForm">
+
+        <div class="payment-options">
+          <label class="payment-option">
+            <input type="radio" name="paymentType" value="Card" checked>
+            <span>Credit / Debit Card</span>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" name="paymentType" value="Cash">
+            <span>Cash on Delivery</span>
+          </label>
+        </div>
+
+        <!-- Card Details -->
+        <div id="cardFields">
+          <div class="input-group">
+            <label>Card Holder Name</label>
+            <input type="text" id="cardName" placeholder="Name on card" />
+          </div>
+
+          <div class="input-group">
+            <label>Card Number</label>
+            <input type="text" id="cardNumber" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" />
+          </div>
+
+          <div class="input-row">
+            <div class="input-group">
+              <label>Expiry Date</label>
+              <input type="text" id="cardExpiry" placeholder="MM/YY" />
+            </div>
+
+            <div class="input-group">
+              <label>CVV</label>
+              <input type="password" id="cardCVV" maxlength="4" placeholder="*" />
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="checkout-btn full-width">
+          Confirm Payment
+        </button>
+      </form>
+
+    </section>
+
+    <!-- ===== Order Summary ===== -->
+    <section class="summary-box checkout-summary">
+      <h2>Order Summary</h2>
+
+      <ul id="paymentOrderList"></ul>
+
+      <div class="summary-line">
+        <span>Subtotal</span>
+        <span id="paySubtotal">0 SAR</span>
+      </div>
+
+      <div class="summary-line">
+        <span>Delivery Fees</span>
+        <span id="payDelivery">5 SAR</span>
+      </div>
+
+      <div class="summary-line">
+        <span>Tax</span>
+        <span id="payTax">0 SAR</span>
+      </div>
+
+      <div class="summary-total">
+        <span>Total</span>
+        <span id="payTotal">0 SAR</span>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="payment.js"></script>
+</body>
+</html>

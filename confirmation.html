@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation - Emtnan Restaurant</title>
+
+    <link rel="stylesheet" href="emtnan-restaurant5.css" />
+    <script src="confirmation.js" defer></script>
+</head>
+
+<body>
+
+<header class="checkout-header">
+    <h2 class="logo">Emtnan</h2>
+</header>
+
+<!-- ====== SUCCESS BOX ====== -->
+<section class="confirmation-box">
+
+    <div class="success-icon">✔</div>
+
+    <h1>Order Confirmed!</h1>
+    <!-- Contact Buttons -->
+<div class="contact-section" style="margin: 15px 0; text-align:center;">
+
+  <a href="https://wa.me/966568360091" 
+     target="_blank" 
+     class="contact-btn"
+     style="display:inline-block; padding:10px 20px; background:#25D366; color:#fff; border-radius:8px; margin:5px;">
+     تواصل عبر واتساب
+  </a>
+
+  <a href="mailto:Emtman17lo@gmail.com" 
+     class="contact-btn"
+     style="display:inline-block; padding:10px 20px; background:#0078FF; color:#fff; border-radius:8px; margin:5px;">
+     تواصل عبر الإيميل
+  </a>
+
+</div>
+    <p class="success-text">Thank you! Your order has been received and is being prepared.</p>
+
+    <div class="info-box">
+        <h2>Order Details</h2>
+
+        <p><strong>Order Number:</strong> <span id="orderNumber"></span></p>
+        <p><strong>Name:</strong> <span id="custName"></span></p>
+        <p><strong>Phone:</strong> <span id="custPhone"></span></p>
+        <p><strong>Address:</strong> <span id="custAddress"></span></p>
+        <p><strong>Payment Method:</strong> <span id="custPayment"></span></p>
+    </div>
+
+    <!-- Order Items -->
+    <div class="order-items">
+        <h2>Items Ordered</h2>
+        <ul id="itemsList"></ul>
+    </div>
+
+    <!-- Totals -->
+<div class="total-box">
+    <h2>Payment Summary</h2>
+
+    <div class="summary-line">
+        <span>Subtotal</span>
+        <span id="subtotal">0 SAR</span>
+    </div>
+
+    <div class="summary-line">
+        <span>Tax (5%)</span>
+        <span id="tax">0 SAR</span>
+    </div>
+
+    <div class="summary-line">
+        <span>Total Paid</span>
+        <span id="total">0 SAR</span>
+    </div>
+</div>
+
+<!-- Buttons -->
+<div class="confirm-buttons">
+    <a href="invoice.html" class="checkout-btn">View Invoice</a>
+    <a href="index.html" class="btn-outline">Back to Home</a>
+    <a href="menu.html" class="btn-gold">Order More</a>
+</div>
+
+<div class="confirm-buttons">
+    <button class="checkout-btn" onclick="window.print()">Print Receipt</button>
+    <button class="checkout-btn" onclick="window.location.href='index.html'">Return to Home</button>
+
+    
+<a id="wpConfirm" class="btn-gold" target="_blank">
+    Confirm via WhatsApp
+</a>
+
+<!-- SMS message preview -->
+<div id="smsPreview" class="sms-box"></div>
+</section>
+
+</body>
+</html>

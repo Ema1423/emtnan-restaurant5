@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            width: 350px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 6px;
+            border: 1px solid #bbb;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px;
+            width: 100%;
+            background: #151411;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #statusBox {
+            margin-top: 25px;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            background: #fff3cd;
+            border-radius: 6px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📦 Track Your Order</h1>
+
+    <div class="box">
+        <p>Enter your Order ID below:</p>
+
+        <input type="text" id="orderInput" placeholder="Enter Order ID">
+
+        <button onclick="trackOrder()">Check Status</button>
+
+        <div id="statusBox"></div>
+    </div>
+
+    <script>
+        let interval = null;
+
+        function trackOrder() {
+            const orderID = document.getElementById("orderInput").value.trim();
+            const statusBox = document.getElementById("statusBox");
+
+            if (!orderID) {
+                alert("Please enter your Order ID");
+                return;
+            }
+
+            statusBox.textContent = "Checking...";
+            statusBox.style.display = "block";
+
+            // إيقاف أي فحص سابق
+            if (interval) clearInterval(interval);
+
+            // جلب الحالة كل 3 ثواني
+            interval = setInterval(() => {
+                fetch('http://127.0.0.1:5000/invoice/${orderID}')
+                    .then(res => res.json())
+                    .then(order => {
+                        if (order.error) {
+                            statusBox.textContent = "Order not found!";
+                            return;
+                        }
+
+                        const status = order.status || "Pending";
+                        statusBox.textContent = 'Current Status: ${status}';
+                    })
+                    .catch(() => {
+                        statusBox.textContent = "Error fetching order!";
+                    });
+
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>

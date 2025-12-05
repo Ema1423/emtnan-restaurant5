@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- مكتبة الأيقونات Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>Emtnan Restaurant</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emtnan Restaurant</title>
+  <link rel="stylesheet" href="emtnan-restaurant5.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- ============ HERO / HEADER ============ -->
+  <header class="hero" id="home">
+    <nav class="navbar">
+      <div class="logo">Emtnan</div>
+
+      <ul class="nav-links">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#menu">MENU</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+
+      <button class="cart-btn" aria-label="Shopping cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-badge">0</span>
+      </button>
+      
+      <button class="track-btn" onclick="window.location.href='order-status.html'">
+      <i class="fas fa-search-location"></i>
+      </button>
+
+
+    <a href="admin.html" class="admin-btn" aria-label="Admin Page"
+       style="margin-left: 10px; font-size: 26px; color: #fff;">
+     ⚙
+    </a>
+    </nav>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">AUTHENTIC FLAVORS</p>
+
+        <h1 class="hero-title">
+          <span>Experience</span><br />
+          <span class="hero-highlight">Culinary</span><br />
+          <span class="hero-italic">Excellence</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Discover a world of exquisite flavors crafted with passion and served
+          with elegance. Every dish tells a story of tradition and innovation.
+        </p>
+
+        <a href="#menu" class="btn-primary">
+          Explore Menu
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span class="scroll-arrow">⌄</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ ABOUT SECTION ============ -->
+    <section class="about" id="about">
+      <div class="about-content">
+        <div class="about-text">
+          <p class="section-eyebrow">OUR STORY</p>
+          <h2 class="section-title">Where Tradition Meets Innovation</h2>
+
+          <p class="section-description">
+            At Emtnan Restaurant, we believe that great food is an art form.
+            Our chefs combine time-honored recipes with modern culinary
+            techniques to create unforgettable dining experiences.
+          </p>
+
+          <p class="section-description">
+            Every ingredient is carefully selected, every dish is thoughtfully
+            prepared, and every meal is served with genuine hospitality that
+            makes you feel at home.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Signature Dishes</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10K+</span>
+              <span class="stat-label">Happy Customers</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image-wrapper">
+          <div class="about-image">
+            <!-- الصورة  -->
+            <img src="images/chef.jpg" alt="Chef preparing dishes" />
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon">🏆</div>
+            <div>
+              <p class="award-label">Award Winning</p>
+              <p class="award-text">Culinary Excellence</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED DISHES / MENU ============ -->
+    <section class="featured" id="menu">
+      <p class="section-eyebrow centered">SIGNATURE COLLECTION</p>
+      <h2 class="section-title centered">Featured Dishes</h2>
+      <p class="section-description centered max-600">
+        Explore our most beloved creations, each crafted to perfection.
+      </p>
+
+      <div class="dish-grid">
+
+  <!-- ================= MAIN DISHES ================= -->
+
+<!-- Grilled Salmon Supreme -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/dish-1.jpg" alt="Grilled Salmon Supreme" />
+    <span class="dish-tag">POPULAR</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Grilled Salmon Supreme</h3>
+    <p class="dish-description">
+      Fresh Atlantic salmon with herb butter, seasonal vegetables, and lemon sauce.
+    </p>
+    <div class="dish-footer">
+<span class="dish-price" data-price="32">32 SAR</span>     
+ <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+
+<!-- Wagyu Beef Tenderloin -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/dish-2.jpg" alt="Wagyu Beef Tenderloin" />
+    <span class="dish-tag">POPULAR</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Wagyu Beef Tenderloin</h3>
+    <p class="dish-description">
+      Premium wagyu cooked to perfection with truffle mashed potatoes.
+    </p>
+    <div class="dish-footer">
+<span class="dish-price" data-price="18">18 SAR</span>   
+   <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+
+<!-- Mediterranean Pasta -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/dish-3.jpg" alt="Mediterranean Pasta" />
+    <span class="dish-tag">POPULAR</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Mediterranean Pasta</h3>
+    <p class="dish-description">
+      Handmade pasta with sun-dried tomatoes, olives, and fresh basil.
+    </p>
+    <div class="dish-footer">
+      <span class="dish-price" data-price="25">25 SAR</span>
+      <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- ================= SALADS ================= -->
+
+<!-- Caesar Salad -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/caesar salad.jpg" alt="Caesar Salad" />
+    <span class="dish-tag">FRESH</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Caesar Salad</h3>
+    <p class="dish-description">
+      Crisp romaine lettuce, parmesan, croutons, and creamy Caesar dressing.
+    </p>
+    <div class="dish-footer">
+      <span class="dish-price" data-price="22">22 SAR</span>
+      <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+
+<!-- Rocket Salad -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/rocket salad.jpg" alt="Rocket Salad" />
+    <span class="dish-tag">LIGHT</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Rocket Salad</h3>
+    <p class="dish-description">
+      Fresh rocket leaves with walnuts, cherry tomatoes, and balsamic glaze.
+    </p>
+    <div class="dish-footer">
+      <span class="dish-price" data-price="17">17 SAR</span>
+      <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- ================= APPETIZERS ================= -->
+
+<!-- Bruschetta -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/bruschetta.jpg" alt="Bruschetta" />
+    <span class="dish-tag">NEW</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Bruschetta</h3>
+    <p class="dish-description">
+      Toasted bread topped with tomatoes, garlic, basil, and olive oil.
+    </p>
+    <div class="dish-footer">
+      <span class="dish-price" data-price="10">10 SAR</span>
+      <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+
+<!-- Potato Wedges -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/potato wedges.jpg" alt="Potato Wedges" />
+    <span class="dish-tag">CRISPY</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Potato Wedges</h3>
+    <p class="dish-description">
+      Golden crispy potato wedges served with spicy dip.
+    </p>
+    <div class="dish-footer">
+      <span class="dish-price" data-price="22">22 SAR</span>
+      <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+
+<!-- Meatballs -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/meatballs.jpg" alt="Meatballs" />
+    <span class="dish-tag">HOT</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Meatballs</h3>
+    <p class="dish-description">
+      Juicy beef meatballs served with rich tomato sauce.
+    </p>
+    <div class="dish-footer">
+      <span class="dish-price" data-price="40">40 SAR</span>
+      <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- ================= DRINKS ================= -->
+
+<!-- Mohito -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/mohito.jpg" alt="Mohito" />
+    <span class="dish-tag">COLD</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Mohito</h3>
+    <p class="dish-description">
+      Refreshing mint and lime mojito with crushed ice.
+    </p>
+    <div class="dish-footer">
+      <span class="dish-price" data-price="9">9 SAR</span>
+      <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+
+<!-- Cheesy Bread -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/cheesy bread.jpg" alt="Cheesy Bread" />
+    <span class="dish-tag">NEW</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Cheesy Bread</h3>
+    <p class="dish-description">
+      Soft bread stuffed with melted cheese and garlic butter.
+    </p>
+    <div class="dish-footer">
+      <span class="dish-price" data-price="16">16 SAR</span>
+      <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- ================= DESSERTS ================= -->
+
+<!-- Cheesecake -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/cheesecake.jpg" alt="Cheesecake" />
+    <span class="dish-tag">SWEET</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Cheesecake</h3>
+    <p class="dish-description">
+      Creamy baked cheesecake served with berry sauce.
+    </p>
+    <div class="dish-footer">
+      <span class="dish-price" data-price="27">27 SAR</span>
+      <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+
+<!-- Tiramisu -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/tiramisu.jpg" alt="Tiramisu" />
+    <span class="dish-tag">SPECIAL</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Tiramisu</h3>
+    <p class="dish-description">
+      Classic Italian dessert with espresso-soaked layers and mascarpone.
+    </p>
+    <div class="dish-footer">
+  <span class="dish-price" data-price="39">39 SAR</span>
+        <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+
+
+<!-- Lava Cake -->
+<article class="dish-card">
+  <div class="dish-image">
+    <img src="images/lavacake.jpg" alt="Lava Cake" />
+    <span class="dish-tag">HOT</span>
+  </div>
+  <div class="dish-body">
+    <h3 class="dish-title">Lava Cake</h3>
+    <p class="dish-description">
+      Warm chocolate cake with molten center, served with vanilla ice cream.
+    </p>
+    <div class="dish-footer">
+      <span class="dish-price" data-price="27">27 SAR</span>
+      <button class="dish-add-btn">+</button>
+    </div>
+  </div>
+</article>
+      </div> 
+
+
+    <!-- ============ CONTACT / RESERVATION ============ -->
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <div class="contact-info">
+          <p class="section-eyebrow">GET IN TOUCH</p>
+          <h2 class="section-title">Visit Us Today</h2>
+          <p class="section-description">
+            We’d love to welcome you to Emtnan Restaurant. Reserve your table
+            or simply drop by for an unforgettable dining experience.
+          </p>
+
+          <ul class="contact-details">
+            <li>
+              <strong>Location</strong><br />
+              123 Culinary Street, Food District<br />
+              City Center, 12345
+            </li>
+            <li>
+              <strong>Opening Hours</strong><br />
+              Mon – Fri: 11:00 AM – 10:00 PM<br />
+              Sat – Sun: 10:00 AM – 11:00 PM
+            </li>
+            <li>
+              <strong>Contact</strong><br />
+              +1 (555) 123-4567<br />
+              info@emtnan.com
+            </li>
+          </ul>
+        </div>
+
+        <div class="reserve-card">
+          <h3 class="reserve-title">Reserve a Table</h3>
+          <form class="reserve-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Email Address" required />
+            <input type="tel" placeholder="Phone Number" required />
+            <input type="date" id="date" name="date" required />
+            <input type="time" placeholder="Time" />
+            <select>
+              <option>Number of Guests</option>
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5+ Guests</option>
+            </select>
+            <button type="submit" class="btn-primary full-width">
+              Reserve Now
+            </button>
+          </form>
+          <script>
+          const dateInput = document.getElementById("date");
+          dateInput.addEventListener("change", () => {
+          const selected = new Date(dateInput.value);
+          const formatted =
+          selected.getMonth() + 1 + "/" + selected.getDate() + "/" + selected.getFullYear();
+          console.log("Selected date:", formatted);
+  });
+</script>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="logo footer-logo">Emtnan</div>
+        <p class="footer-text">
+          Experience culinary excellence with every dish we serve.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hours</h4>
+        <p class="footer-text">
+          Mon – Fri: 11AM – 10PM<br />
+          Sat – Sun: 10AM – 11PM
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Follow Us</h4>
+        <div class="social-icons">
+          <a href="#">Fb</a>
+          <a href="#">Ig</a>
+          <a href="#">X</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Emtnan Restaurant. All rights reserved.</span>
+      <span class="footer-powered">Designed by Emtnan.</span>
+    </div>
+  </footer>
+  <!-- Mini Cart Popup -->
+<div class="mini-cart" id="miniCart">
+  <h3>Shopping Cart</h3>
+  <ul id="cartItems"></ul>
+  <button id="closeCart" class="close-cart-btn">Close</button>
+</div>
+</body>
+</html>
