@@ -41,7 +41,7 @@ renderOrderReview();
 updateTotals();
 
 // ========== 3) متابعة الدفع ==========
- async function submitOrder() {
+async function submitOrder() {
 
   const orderData = {
     name: document.getElementById("fullName").value,
@@ -51,9 +51,7 @@ updateTotals();
     payment: document.querySelector("input[name='payment']:checked")?.value,
     notes: document.getElementById("notes").value,
     cart: cart,
-    subtotal: subtotalEl.textContent,
-    tax: taxEl.textContent,
-    total: totalEl.textContent
+    subtotal: cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
   };
 
   if (!orderData.name || !orderData.phone || !orderData.address || !orderData.payment) {
@@ -61,9 +59,24 @@ updateTotals();
     return;
   }
 
-  // احفظ كل البيانات في localStorage
-  localStorage.setItem("orderData", JSON.stringify(orderData));
+  try {
+    // إرسال الطلب للباك اند
+    const response = await fetch("http://127.0.0.1:5000/create-order", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(orderData)
+    });
 
-  // روحي لصفحة الدفع
-  window.location.href = "payment.html";
+    const data = await response.json();
+
+    // حفظ رقم الطلب
+    localStorage.setItem("order_id", data.order_id);
+    localStorage.removeItem("cart");
+    // الانتقال لصفحة التأكيد
+    window.location.href = "confirmation.html";
+
+  } catch (err) {
+    console.error("ORDER ERROR:", err);
+    alert("Failed to place order. Please try again.");
+  }
 }

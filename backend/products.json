@@ -1,1 +1,92 @@
-[]
+[
+    {
+        "id": 1,
+        "name": "Caesar Salad",
+        "price": 22,
+        "calories": 250,
+        "prep_time": "7 min",
+        "image": "images/caesar salad.jpg",
+        "category": "salad"
+    },
+    {
+        "id": 2,
+        "name": "Rocket Salad",
+        "price": 17,
+        "calories": 200,
+        "prep_time": "6 min",
+        "image": "images/rocket salad.jpg",
+        "category": "salad"
+    },
+    {
+        "id": 3,
+        "name": "Bruschetta",
+        "price": 10,
+        "calories": 180,
+        "prep_time": "5 min",
+        "image": "images/bruschetta.jpg",
+        "category": "appetizer"
+    },
+    {
+        "id": 4,
+        "name": "Cheesy Bread",
+        "price": 16,
+        "calories": 350,
+        "prep_time": "6 min",
+        "image": "images/cheesy bread.jpg",
+        "category": "appetizer"
+    },
+    {
+        "id": 5,
+        "name": "Potato Wedges",
+        "price": 22,
+        "calories": 400,
+        "prep_time": "8 min",
+        "image": "images/potato wedges.jpg",
+        "category": "appetizer"
+    },
+    {
+        "id": 6,
+        "name": "Meatballs",
+        "price": 40,
+        "calories": 620,
+        "prep_time": "12 min",
+        "image": "images/meatballs.jpg",
+        "category": "main"
+    },
+    {
+        "id": 7,
+        "name": "Mohito",
+        "price": 9,
+        "calories": 160,
+        "prep_time": "2 min",
+        "image": "images/mohito.jpg",
+        "category": "drink"
+    },
+    {
+        "id": 8,
+        "name": "Cheesecake",
+        "price": 27,
+        "calories": 430,
+        "prep_time": "6 min",
+        "image": "images/cheesecake.jpg",
+        "category": "dessert"
+    },
+    {
+        "id": 9,
+        "name": "Tiramisu",
+        "price": 39,
+        "calories": 450,
+        "prep_time": "7 min",
+        "image": "images/tiramisu.jpg",
+        "category": "dessert"
+    },
+    {
+        "id": 10,
+        "name": "Lava Cake",
+        "price": 27,
+        "calories": 500,
+        "prep_time": "8 min",
+        "image": "images/lavacake.jpg",
+        "category": "dessert"
+    }
+]

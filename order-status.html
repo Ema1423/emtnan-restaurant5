@@ -87,7 +87,7 @@
 
             // جلب الحالة كل 3 ثواني
             interval = setInterval(() => {
-                fetch('http://127.0.0.1:5000/invoice/${orderID}')
+                fetch(`http://127.0.0.1:5000/invoice/${orderID}`)
                     .then(res => res.json())
                     .then(order => {
                         if (order.error) {
@@ -96,7 +96,10 @@
                         }
 
                         const status = order.status || "Pending";
-                        statusBox.textContent = 'Current Status: ${status}';
+                        statusBox.innerHTML = `
+                             <p><strong>Order ID:</strong> ${orderID}</p>
+                             <p><strong>Status:</strong> ${status}</p>
+                     `;
                     })
                     .catch(() => {
                         statusBox.textContent = "Error fetching order!";

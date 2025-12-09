@@ -9,7 +9,7 @@ const taxEl = document.getElementById("payTax");
 const deliveryEl = document.getElementById("payDelivery");
 const totalEl = document.getElementById("payTotal");
 
-// لو ما فيه بيانات طلب → رجعي المستخدم للـ checkout
+// لو ما فيه بيانات طلب →  المستخدم يرجع للـ checkout
 if (!orderData || cart.length === 0) {
   window.location.href = "checkout.html";
 }
@@ -30,8 +30,7 @@ function renderPaymentSummary() {
     subtotal += item.price * item.quantity;
   });
 
-  const tax = subtotal * 0.15; // لو تبين 5% غيريها لـ 0.05
-  const delivery = 5;
+  const tax = subtotal * 0.15;  
   const total = subtotal + tax + delivery;
 
   subtotalEl.textContent = subtotal.toFixed(2) + " SAR";

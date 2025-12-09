@@ -1,1 +1,260 @@
-[]
+[
+    {
+        "order_id": "100003",
+        "name": "Lama Ali",
+        "phone": "0549876543",
+        "address": "Jeddah, KSA",
+        "payment": "Apple Pay",
+        "cart": [
+            {
+                "name": "Grilled Chicken",
+                "price": 30,
+                "quantity": 2
+            },
+            {
+                "name": "Greek Salad",
+                "price": 16,
+                "quantity": 1
+            }
+        ],
+        "subtotal": 76
+    },
+    {
+        "order_id": "297343",
+        "name": "emtnan",
+        "phone": "0568360091",
+        "address": "منطقة ظهران الجنوب",
+        "payment": "Cash",
+        "cart": [
+            {
+                "name": "Grilled Salmon Supreme",
+                "price": 32,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/dish-1.jpg"
+            },
+            {
+                "name": "Wagyu Beef Tenderloin",
+                "price": 18,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/dish-2.jpg"
+            },
+            {
+                "name": "Mediterranean Pasta",
+                "price": 25,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/dish-3.jpg"
+            },
+            {
+                "name": "Bruschetta",
+                "price": 10,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/bruschetta.jpg"
+            },
+            {
+                "name": "Rocket Salad",
+                "price": 17,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/rocket%20salad.jpg"
+            },
+            {
+                "name": "Caesar Salad",
+                "price": 22,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/caesar%20salad.jpg"
+            }
+        ],
+        "subtotal": 124
+    },
+    {
+        "order_id": "133355",
+        "name": "emtnan",
+        "phone": "0568360091",
+        "address": "abha",
+        "payment": "Cash",
+        "cart": [
+            {
+                "name": "Grilled Salmon Supreme",
+                "price": 32,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/dish-1.jpg"
+            },
+            {
+                "name": "Caesar Salad",
+                "price": 22,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/caesar%20salad.jpg"
+            },
+            {
+                "name": "Tiramisu",
+                "price": 39,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/tiramisu.jpg"
+            },
+            {
+                "name": "Lava Cake",
+                "price": 27,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/lavacake.jpg"
+            },
+            {
+                "name": "Cheesecake",
+                "price": 27,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/cheesecake.jpg"
+            },
+            {
+                "name": "Cheesy Bread",
+                "price": 16,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/cheesy%20bread.jpg"
+            }
+        ],
+        "subtotal": 163,
+        "status": "Pending"
+    },
+    {
+        "order_id": "267110",
+        "name": "sara",
+        "phone": "45564433322",
+        "address": "abha",
+        "payment": "Cash",
+        "cart": [
+            {
+                "name": "Grilled Salmon Supreme",
+                "price": 32,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/dish-1.jpg"
+            },
+            {
+                "name": "Meatballs",
+                "price": 40,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/meatballs.jpg"
+            },
+            {
+                "name": "Mohito",
+                "price": 9,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/mohito.jpg"
+            },
+            {
+                "name": "Cheesy Bread",
+                "price": 16,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/cheesy%20bread.jpg"
+            },
+            {
+                "name": "Cheesecake",
+                "price": 27,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/cheesecake.jpg"
+            }
+        ],
+        "subtotal": 124,
+        "status": "Pending"
+    },
+    {
+        "order_id": "171475",
+        "name": "samar",
+        "phone": "555555555555",
+        "address": "منطقة ظهران الجنوب",
+        "payment": "Cash",
+        "cart": [
+            {
+                "name": "Grilled Salmon Supreme",
+                "price": 32,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/dish-1.jpg"
+            },
+            {
+                "name": "Meatballs",
+                "price": 40,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/meatballs.jpg"
+            },
+            {
+                "name": "Mohito",
+                "price": 9,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/mohito.jpg"
+            },
+            {
+                "name": "Cheesy Bread",
+                "price": 16,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/cheesy%20bread.jpg"
+            },
+            {
+                "name": "Cheesecake",
+                "price": 27,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/cheesecake.jpg"
+            }
+        ],
+        "subtotal": 124,
+        "status": "Ready"
+    },
+    {
+        "order_id": "328483",
+        "name": " maha",
+        "phone": "366666667",
+        "address": "abha",
+        "payment": "Cash",
+        "cart": [
+            {
+                "name": "Meatballs",
+                "price": 40,
+                "quantity": 5,
+                "image": "http://127.0.0.1:5500/images/meatballs.jpg"
+            }
+        ],
+        "subtotal": 200,
+        "status": "Ready"
+    },
+    {
+        "order_id": "148022",
+        "name": "rama",
+        "phone": "9998888888",
+        "address": "abha",
+        "payment": "Cash",
+        "cart": [
+            {
+                "name": "Bruschetta",
+                "price": 10,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/bruschetta.jpg"
+            },
+            {
+                "name": "Potato Wedges",
+                "price": 22,
+                "quantity": 2,
+                "image": "http://127.0.0.1:5500/images/potato%20wedges.jpg"
+            },
+            {
+                "name": "Lava Cake",
+                "price": 27,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/lavacake.jpg"
+            }
+        ],
+        "subtotal": 81,
+        "status": "Ready"
+    },
+    {
+        "order_id": "288348",
+        "name": "emtnan",
+        "phone": "0000000000",
+        "address": "abha",
+        "payment": "Cash",
+        "cart": [
+            {
+                "name": "Grilled Salmon Supreme",
+                "price": 32,
+                "quantity": 1,
+                "image": "http://127.0.0.1:5500/images/dish-1.jpg"
+            }
+        ],
+        "subtotal": 32,
+        "status": "Pending"
+    }
+]

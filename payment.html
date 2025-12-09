@@ -1,123 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment - Emtnan Restaurant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Emtnan Restaurant</title>
 
-  <!-- نفس ملف التنسيق حق المشروع -->
-  <link rel="stylesheet" href="emtnan-restaurant5.css" />
+    <link rel="stylesheet" href="emtnan-restaurant5.css">
+    <script src="payment.js" defer></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+            padding: 20px;
+        }
+
+        .payment-container {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #ddd;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .summary {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            background: #151411;
+            color: white;
+            font-size: 17px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- ===== Header ===== -->
-  <header class="checkout-header">
-    <h2 class="logo">Emtnan</h2>
-    <a href="checkout.html" class="back-link">← Back to Details</a>
-  </header>
+    <div class="payment-container">
+        <h2>Review & Confirm Payment</h2>
 
-  <!-- ===== Steps Bar ===== -->
-  <div class="steps">
-    <div class="step">
-      <span class="icon">🛒</span>
-      <p>Cart</p>
-    </div>
-    <div class="step">
-      <span class="icon">📄</span>
-      <p>Details</p>
-    </div>
-    <div class="step active">
-      <span class="icon">💳</span>
-      <p>Payment</p>
-    </div>
-    <div class="step">
-      <span class="icon">✔</span>
-      <p>Confirmation</p>
-    </div>
-  </div>
-
-  <main class="checkout-page">
-
-    <!-- ===== Payment Form ===== -->
-    <section class="checkout-box">
-      <h2>Payment Method</h2>
-
-      <form id="paymentForm">
-
-        <div class="payment-options">
-          <label class="payment-option">
-            <input type="radio" name="paymentType" value="Card" checked>
-            <span>Credit / Debit Card</span>
-          </label>
-
-          <label class="payment-option">
-            <input type="radio" name="paymentType" value="Cash">
-            <span>Cash on Delivery</span>
-          </label>
+        <div class="summary">
+            <p><strong>Name:</strong> <span id="name"></span></p>
+            <p><strong>Phone:</strong> <span id="phone"></span></p>
+            <p><strong>Address:</strong> <span id="address"></span></p>
+            <p><strong>Payment Method:</strong> <span id="payment"></span></p>
+            <hr>
+            <p><strong>Subtotal:</strong> <span id="subtotal"></span></p>
+            <p><strong>Tax (5%):</strong> <span id="tax"></span></p>
+            <p><strong>Total:</strong> <span id="total"></span></p>
         </div>
 
-        <!-- Card Details -->
-        <div id="cardFields">
-          <div class="input-group">
-            <label>Card Holder Name</label>
-            <input type="text" id="cardName" placeholder="Name on card" />
-          </div>
+        <button onclick="confirmPayment()">Confirm Order</button>
+    </div>
 
-          <div class="input-group">
-            <label>Card Number</label>
-            <input type="text" id="cardNumber" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" />
-          </div>
-
-          <div class="input-row">
-            <div class="input-group">
-              <label>Expiry Date</label>
-              <input type="text" id="cardExpiry" placeholder="MM/YY" />
-            </div>
-
-            <div class="input-group">
-              <label>CVV</label>
-              <input type="password" id="cardCVV" maxlength="4" placeholder="*" />
-            </div>
-          </div>
-        </div>
-
-        <button type="submit" class="checkout-btn full-width">
-          Confirm Payment
-        </button>
-      </form>
-
-    </section>
-
-    <!-- ===== Order Summary ===== -->
-    <section class="summary-box checkout-summary">
-      <h2>Order Summary</h2>
-
-      <ul id="paymentOrderList"></ul>
-
-      <div class="summary-line">
-        <span>Subtotal</span>
-        <span id="paySubtotal">0 SAR</span>
-      </div>
-
-      <div class="summary-line">
-        <span>Delivery Fees</span>
-        <span id="payDelivery">5 SAR</span>
-      </div>
-
-      <div class="summary-line">
-        <span>Tax</span>
-        <span id="payTax">0 SAR</span>
-      </div>
-
-      <div class="summary-total">
-        <span>Total</span>
-        <span id="payTotal">0 SAR</span>
-      </div>
-
-    </section>
-
-  </main>
-
-  <script src="payment.js"></script>
 </body>
 </html>
