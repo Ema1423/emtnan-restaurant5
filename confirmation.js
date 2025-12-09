@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // طلب بيانات الفاتورة من السيرفر
-    fetch(`http://127.0.0.1:5000/invoice/${orderID}`)
+    fetch(`https://emtnan-restaurant5.onrender.com/invoice/${orderID}`)
         .then(res => {
             if (!res.ok) {
                 throw new Error(`HTTP Error: ${res.status}`);

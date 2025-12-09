@@ -3,7 +3,7 @@ if (localStorage.getItem("adminAuth") !== "true") {
     window.location.href = "admin-login.html";
 }
 // جلب كل الطلبات
-fetch("http://127.0.0.1:5000/orders")
+   fetch("https://emtnan-restaurant5.onrender.com/orders")
   .then(res => res.json())
   .then(orders => {
     const table = document.getElementById("ordersTable");
@@ -55,7 +55,7 @@ function deleteOrder(id) {
 
     if (!confirm("Are you sure you want to delete this order?")) return;
 
-    fetch(`http://127.0.0.1:5000/delete-order/${id}`, {
+    fetch(`https://emtnan-restaurant5.onrender.com/delete-order/${id}`, {
         method: "DELETE"
     })
     .then(res => res.json())
@@ -71,7 +71,7 @@ function logout() {
 }
 function changeStatus(orderID, newStatus) {
 
-    fetch(`http://127.0.0.1:5000/order-status/${orderID}`, {
+    fetch(`https://emtnan-restaurant5.onrender.com/order-status/${orderID}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"

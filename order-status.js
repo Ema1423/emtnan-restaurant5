@@ -9,7 +9,7 @@ function checkStatus() {
     }
 
     // هنا المشكلة… الآن تم حلها ⬇⬇⬇ (Backticks موجودة)
-    fetch(`http://127.0.0.1:5000/invoice/${orderID}`)
+    fetch(`https://emtnan-restaurant5.onrender.com/invoice/${orderID}`)
         .then(res => res.json())
         .then(order => {
             if (order.error) {
