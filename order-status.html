@@ -87,7 +87,7 @@
 
             // جلب الحالة كل 3 ثواني
             interval = setInterval(() => {
-                fetch(`http://127.0.0.1:5000/invoice/${orderID}`)
+                fetch(`https://emtnan-restaurant5-backend.onrender.com/invoice/${orderID}`)
                     .then(res => res.json())
                     .then(order => {
                         if (order.error) {

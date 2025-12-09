@@ -61,7 +61,7 @@ async function submitOrder() {
 
   try {
     // إرسال الطلب للباك اند
-    const response = await fetch("https://emtnan-restaurant5.onrender.com/create-order", {
+    const response = await fetch("https://emtnan-restaurant5-backend.onrender.com/create-order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(orderData)
